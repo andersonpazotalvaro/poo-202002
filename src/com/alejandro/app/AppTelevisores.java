@@ -26,6 +26,7 @@ public class AppTelevisores {
         Televisor tv = new Televisor();
         tv.marca = "Samsung";
         tv.prender();
+        tv.cambiarCanal((short) 20);
 
         Televisor tv2 = new Televisor();
         tv2.marca = "Sony";
