@@ -8,11 +8,6 @@ public class jugador {
     private int dinero;
 
 
-    public int tirarDado() {
-        int dado;
-        dado = (int) Math.floor(Math.random()*6+1);
-        return dado;
-    }
 
 
 
