@@ -1,37 +1,36 @@
 package com.taller1.domain;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class tour {
+    public String nombreTour;
 private List<equipo> equipos;
 private List<etapa> etapas;
 private List<corredor> todosCorredores;
 
-
-    public void getEquipos(){
-        equipos.forEach(equipo -> {
-            System.out.println(equipo.getNombreEquipo());
-        });
+    public tour(String nombreTour) {
+        this.nombreTour = nombreTour;
     }
 
-    public void getEtapas(){
-        etapas.forEach(etapa -> {
-            System.out.println(etapa.getLugar());
-        });
+    public String getNombreTour() {
+        return nombreTour;
     }
 
-   /* public corredor getTop10(){
-        List<corredor> ganadores;
+    public void setNombreTour(String nombreTour) {
+        this.nombreTour = nombreTour;
+    }
 
-        todosCorredores.addAll()
-
-
-
-    }*/
-
+    public List<equipo> getEquipos() {
+        return equipos;
+    }
 
     public void setEquipos(List<equipo> equipos) {
         this.equipos = equipos;
+    }
+
+    public List<etapa> getEtapas() {
+        return etapas;
     }
 
     public void setEtapas(List<etapa> etapas) {
@@ -45,4 +44,20 @@ private List<corredor> todosCorredores;
     public void setTodosCorredores(List<corredor> todosCorredores) {
         this.todosCorredores = todosCorredores;
     }
+
+    public void getCorredoresOrdenadosEdad(equipo e){
+        // equipo corredoresOrdenadoss= e;
+        List<corredor>corredoresOrdenaros;
+        corredoresOrdenaros= (List<corredor>) e.getCorredorlist().stream().sorted(Comparator.comparing(corredor::getEdad));
+
+
+      /*corredoresOrdenaross= corredorlist.stream().sorted(corredoresOrdenaros.));
+      corredorlist=corredoresOrdenaros;*/
+        corredoresOrdenaros.forEach(corredor -> {
+            System.out.println(corredor.getNombre());
+            System.out.println(corredor.getEdad());
+        });
+
+    }
+
 }

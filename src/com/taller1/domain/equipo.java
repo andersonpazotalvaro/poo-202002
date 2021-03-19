@@ -11,7 +11,7 @@ public class equipo {
         this.nombreEquipo = nombreEquipo;
     }
 
-    public static void getCorredoresOrdenados(List<corredor> lista){
+    /*public static void getCorredoresOrdenados(List<corredor> lista){
         int clave, i;
         int n=lista.size();
         for (int j=1;j<n;j++){
@@ -19,13 +19,14 @@ public class equipo {
             i=j-1;
 
         }
-    }
+    }*/
 
 
     /*public void getCorredoresOrdenados(){
        List<corredor>corredoresOrdenaros;
-
-      corredoresOrdenaros= corredorlist.stream().sorted(corredoresOrdenaros.));
+       corredoresOrdenaros=corredorlist;
+       corredoresOrdenaros=corredoresOrdenaros.stream(corredoresOrdenaros).sorted(;
+      corredoresOrdenaros= corredoresOrdenaros.stream().sorted());
       corredorlist=corredoresOrdenaros;
         corredoresOrdenaros.forEach(corredor -> {
             System.out.println(corredor.getNombre());
@@ -35,9 +36,13 @@ public class equipo {
   }*/
 
 
+    public List<corredor> getCorredorlist() {
+        return corredorlist;
+    }
 
-
-
+    public void setCorredorlist(List<corredor> corredorlist) {
+        this.corredorlist = corredorlist;
+    }
 
     public String getNombreEquipo() {
         return nombreEquipo;

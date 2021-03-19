@@ -1,25 +1,30 @@
 package com.taller1.app;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
-import com.taller1.domain.etapa;
-import com.taller1.domain.equipo;
-import com.taller1.domain.corredor;
+import com.taller1.domain.*;
 
 public class AppTour {
     public static void main(String[] args){
-        etapa paris= new etapa("paris") ;
-        equipo losSayayines = new equipo("losSayayines");
-        corredor goku = new corredor(35,"goku",1);
-        corredor vegeta = new corredor(37,"vegeta",2);
-        corredor krilin = new corredor(31,"krilin",3);
-        corredor bulma = new corredor(38,"bulma",4);
-        corredor gohan = new corredor(22,"gohan",5);
-        losSayayines.corredorlist = new ArrayList<>();
-        losSayayines.corredorlist.addAll(Arrays.asList(goku,vegeta,krilin,bulma,gohan));
+        //etapa paris= new etapa("paris") ;
+        tour francia = new tour("francia");
+        equipo colombia = new equipo("colombia");
+        corredor jairo = new corredor(35,"jairo",1);
+        corredor rigoberto = new corredor(37,"rigoberto",2);
+        corredor andres = new corredor(31,"andres",3);
+        corredor juan = new corredor(38,"juan",4);
+        corredor sara = new corredor(22,"sara",5);
+        colombia.corredorlist = new ArrayList<>();
+        francia.getEquipos().add(colombia);
+       // francia.getEquipos().addAll(Arrays.asList(colombia));
+        //francia.getEquipos().addAll(Arrays.asList(colombia));
+        //francia.getEtapas().addAll(Arrays.asList(paris));
+        colombia.corredorlist.addAll(Arrays.asList(jairo,rigoberto,andres,juan,sara));
 
-        //losSayayines.getCorredoresOrdenados();
+
+        //francia.getCorredoresOrdenadosEdad(colombia);
+
 
 
 
